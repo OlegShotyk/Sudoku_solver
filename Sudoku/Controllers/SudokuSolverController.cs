@@ -9,7 +9,7 @@ namespace Sudoku.Controllers
     public class SudokuSolverController : ControllerBase
     {
         [HttpPost]
-        public async Task<ActionResult<string>> SolveSudoku(string jsonInput)
+        public async Task<ActionResult<string>> SolveSudoku([FromBody] string jsonInput)
         {
             Board boardInput = new Board();
             try
